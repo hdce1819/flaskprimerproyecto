@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Saludo</h1>
+
+        <form method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="mensaje" placeholder="Saludo" required>
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if resultado %}
+            <div class="resultado">
+                {{ resultado }}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
